@@ -144,13 +144,24 @@
                                     <action selector="playChickMunkAudio:" destination="NS1-dV-5Kh" eventType="touchUpInside" id="7MX-Jk-cmi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cld-k0-jB4">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="darthvader">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playDarthVaderAudio:" destination="NS1-dV-5Kh" eventType="touchUpInside" id="xLV-ZR-Bil"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="cld-k0-jB4" firstAttribute="top" secondItem="g7B-ad-EEr" secondAttribute="bottom" constant="169" id="7Gr-ST-AMH"/>
                             <constraint firstItem="zID-Yr-Jyk" firstAttribute="leading" secondItem="8du-bb-wSd" secondAttribute="leadingMargin" constant="14" id="9ca-Qo-z1v"/>
                             <constraint firstAttribute="centerY" secondItem="fNM-3G-xgh" secondAttribute="centerY" constant="-180" id="STm-an-K8P"/>
                             <constraint firstItem="zID-Yr-Jyk" firstAttribute="top" secondItem="g7B-ad-EEr" secondAttribute="bottom" constant="169" id="TLL-R5-LgW"/>
                             <constraint firstItem="HNQ-0W-mh8" firstAttribute="top" secondItem="g7B-ad-EEr" secondAttribute="bottom" constant="20" id="XPL-bx-RqV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cld-k0-jB4" secondAttribute="trailing" constant="18" id="bZY-OW-blf"/>
                             <constraint firstAttribute="centerX" secondItem="fNM-3G-xgh" secondAttribute="centerX" constant="-2" id="cnu-Bc-H7U"/>
                             <constraint firstItem="HNQ-0W-mh8" firstAttribute="leading" secondItem="8du-bb-wSd" secondAttribute="leadingMargin" constant="14" id="k0Q-Zn-pAi"/>
                             <constraint firstItem="aby-d5-4Ei" firstAttribute="top" secondItem="g7B-ad-EEr" secondAttribute="bottom" constant="20" id="wbM-gn-xCi"/>
@@ -162,6 +173,7 @@
                                 <exclude reference="fNM-3G-xgh"/>
                                 <exclude reference="HNQ-0W-mh8"/>
                                 <exclude reference="zID-Yr-Jyk"/>
+                                <exclude reference="cld-k0-jB4"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="XPL-bx-RqV"/>
@@ -170,6 +182,8 @@
                                 <exclude reference="TLL-R5-LgW"/>
                                 <exclude reference="wbM-gn-xCi"/>
                                 <exclude reference="xva-6X-W9c"/>
+                                <exclude reference="7Gr-ST-AMH"/>
+                                <exclude reference="bZY-OW-blf"/>
                                 <exclude reference="STm-an-K8P"/>
                                 <exclude reference="cnu-Bc-H7U"/>
                             </mask>
@@ -180,6 +194,7 @@
                                 <include reference="fNM-3G-xgh"/>
                                 <include reference="HNQ-0W-mh8"/>
                                 <include reference="zID-Yr-Jyk"/>
+                                <include reference="cld-k0-jB4"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="XPL-bx-RqV"/>
@@ -188,6 +203,8 @@
                                 <include reference="TLL-R5-LgW"/>
                                 <include reference="wbM-gn-xCi"/>
                                 <include reference="xva-6X-W9c"/>
+                                <include reference="7Gr-ST-AMH"/>
+                                <include reference="bZY-OW-blf"/>
                                 <include reference="STm-an-K8P"/>
                                 <include reference="cnu-Bc-H7U"/>
                             </mask>
@@ -220,6 +237,7 @@
     <resources>
         <image name="Stop button" width="50" height="50"/>
         <image name="chipmunk" width="100" height="100"/>
+        <image name="darthvader" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="rabit" width="100" height="100"/>
         <image name="snail" width="100" height="100"/>
