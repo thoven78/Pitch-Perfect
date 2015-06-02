@@ -178,14 +178,14 @@
                             <mask key="constraints">
                                 <exclude reference="XPL-bx-RqV"/>
                                 <exclude reference="k0Q-Zn-pAi"/>
-                                <exclude reference="9ca-Qo-z1v"/>
-                                <exclude reference="TLL-R5-LgW"/>
                                 <exclude reference="wbM-gn-xCi"/>
                                 <exclude reference="xva-6X-W9c"/>
                                 <exclude reference="7Gr-ST-AMH"/>
                                 <exclude reference="bZY-OW-blf"/>
                                 <exclude reference="STm-an-K8P"/>
                                 <exclude reference="cnu-Bc-H7U"/>
+                                <exclude reference="9ca-Qo-z1v"/>
+                                <exclude reference="TLL-R5-LgW"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -199,14 +199,14 @@
                             <mask key="constraints">
                                 <include reference="XPL-bx-RqV"/>
                                 <include reference="k0Q-Zn-pAi"/>
-                                <include reference="9ca-Qo-z1v"/>
-                                <include reference="TLL-R5-LgW"/>
                                 <include reference="wbM-gn-xCi"/>
                                 <include reference="xva-6X-W9c"/>
                                 <include reference="7Gr-ST-AMH"/>
                                 <include reference="bZY-OW-blf"/>
                                 <include reference="STm-an-K8P"/>
                                 <include reference="cnu-Bc-H7U"/>
+                                <include reference="9ca-Qo-z1v"/>
+                                <include reference="TLL-R5-LgW"/>
                             </mask>
                         </variation>
                     </view>

@@ -22,14 +22,6 @@ class PlaySoundsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if var filePathUrl = NSBundle.mainBundle().URLForResource("movie_quote", withExtension: "mp3") {
-//            audioPlayer = AVAudioPlayer(contentsOfURL: filePathUrl, error: nil)
-//            audioPlayer.enableRate = true
-//        
-//        } else {
-//            print("No Audio found");
-//        }
-        
         audioPlayer = AVAudioPlayer(contentsOfURL: recievedAudio.filePathUrl, error: nil)
         audioPlayer.enableRate = true
         audioEngine = AVAudioEngine()
@@ -38,7 +30,6 @@ class PlaySoundsViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func playChickMunkAudio(sender: UIButton) {
@@ -47,6 +38,17 @@ class PlaySoundsViewController: UIViewController {
     
     @IBAction func playDarthVaderAudio(sender: UIButton) {
         playAudioWithVariablePitch(-1000)
+    }
+    
+    func playWithRate(rate: Float) {
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
+        audioPlayer.stop()
+        audioPlayer.currentTime = 0.0
+        audioPlayer.rate = rate
+        audioPlayer.play()
     }
     
     func playAudioWithVariablePitch(pitch: Float) {
@@ -73,18 +75,13 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playSlowAudio(sender: UIButton) {
-        audioPlayer.stop()
-        audioPlayer.currentTime = 0.0
-        audioPlayer.rate = 0.5
-        audioPlayer.play()
+        playWithRate(0.5)
     }
 
     @IBAction func playFastAudio(sender: UIButton) {
-        audioPlayer.stop()
-        audioPlayer.currentTime = 0.0
-        audioPlayer.rate = 1.50
-        audioPlayer.play()
+       playWithRate(1.50)
     }
+    
     
     @IBAction func stopAudio(sender: UIButton) {
         audioPlayer.stop()
