@@ -26,6 +26,8 @@ class PlaySoundsViewController: UIViewController {
         audioPlayer.enableRate = true
         audioEngine = AVAudioEngine()
         audioFile = AVAudioFile(forReading: recievedAudio.filePathUrl, error: nil)
+        
+        navigationItem.title = "Audio Effects"
     }
 
     override func didReceiveMemoryWarning() {
