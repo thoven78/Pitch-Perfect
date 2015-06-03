@@ -33,29 +33,34 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playChickMunkAudio(sender: UIButton) {
+        stopAllAudio()
         playAudioWithVariablePitch(1000)
     }
     
     @IBAction func playDarthVaderAudio(sender: UIButton) {
+        stopAllAudio() // stop all audio before play
         playAudioWithVariablePitch(-1000)
     }
     
-    func playWithRate(rate: Float) {
+    func stopAllAudio() {
         audioPlayer.stop()
         audioEngine.stop()
         audioEngine.reset()
         
         audioPlayer.stop()
         audioPlayer.currentTime = 0.0
+    }
+    
+    func playWithRate(rate: Float) {
+        stopAllAudio()
         audioPlayer.rate = rate
         audioPlayer.play()
     }
-    
+    // This function is responsible to play audio 
+    // files with different pitch
     func playAudioWithVariablePitch(pitch: Float) {
         
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        stopAllAudio() // stop all audio
         
         var audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -75,16 +80,18 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playSlowAudio(sender: UIButton) {
+        stopAllAudio()
         playWithRate(0.5)
     }
 
     @IBAction func playFastAudio(sender: UIButton) {
+        stopAllAudio()
        playWithRate(1.50)
     }
     
     
     @IBAction func stopAudio(sender: UIButton) {
-        audioPlayer.stop()
+        stopAllAudio()
     }
 
 }
